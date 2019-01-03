@@ -1,14 +1,47 @@
 <!DOCTYPE html>
-<html ng-app>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>inicio - Mi AngularJS page</title>
-</head>
-<body>
-  
-<!-- *********************   scripts    ********************-->
-<script src="js/angular.min.js"></script>
+<html ng-app="mainApp">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>inicio - Mi AngularJS page</title>
+    
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <!-- <base href="localhost/miangularjs/"> -->
+  <!-- navbar -->
+  <!-- <ng-include src="'app/components/navbar/navbar.html'"></ng-include> -->
+  <div>
+    <form action="">
+      <input type="text" name="usuario" id="usuario" placeholder="usuario" ng-model="usuario">
+      <br>
+      <input type="password" placeholder="contraseña">
+      <br>
+      <br>
+      <p>{{usuario}}</p>
+      <a href="#/dashboard" class="btn btn-success" ng-click="iniciarSesion()">iniciar sesion</a>
+    </form>
+  </div>
+
+<!-- ****************************************   scripts    ***************************************-->
+<!-- angularJS -->
+<script src="assets/js/libs/angular.min.js"></script>
+
+<!-- rutas angularJS -->
+<script src="assets/js/libs/angular-route.min.js"></script>
+
+<!-- bootstrap JS -->
+<!-- <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+
+<!-- jquery -->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+<!-- popper.js -->
+<!-- <script src="node_modules/popper.js/dist/umd/popper.min.js"></script> -->
+
+<!-- controladores -->
+<script src="assets/js/controlador.js"></script>
 </body>
 </html>
