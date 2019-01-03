@@ -1,2 +1,59 @@
-<h1>hola</h1>
-<a href="#" class="btn btn-primary">enviar</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <a class="navbar-brand logotitulo" href="#/dashboard">Mi Angular<strong class="strongJS">JS</strong> Page</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#/dashboard">Dashboard<span class="sr-only">(current)</span></a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li> -->
+      <li class="nav-item">
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Más secciones
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">¿Quienes somos?</a>
+            <a class="dropdown-item" href="#">Nuestra comunidad</a>
+            <a class="dropdown-item" href="#/contacto">Contáctenos</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item" ng-controller="busquedaController">
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="¿buscas algo?" aria-label="Search" id="txt_busqueda">
+          <button class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal" >Buscar</button>
+        </form>
+      </li>
+    </ul>
+    <a href="#/" class="nav-link btnCerrarSesion" ng-controller="loginController" ng-click="cerrarSesion()">Cerrar sesión</a>
+  </div>
+</nav>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Le pregunté a mis servidores y me dijeron que:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" ng-controller="busquedaController">
+          {{mensaje_busqueda}}
+          <br>
+          ciertamente no tenemos eso que usted esta buscando!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Ok :(</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -7,41 +7,36 @@
     <title>inicio - Mi AngularJS page</title>
     
     <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="assets/css/estilos-navbar.css">
+    <link rel="stylesheet" href="assets/css/estilos-dashboard.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"> -->
   </head>
   <body>
-    <!-- <base href="localhost/miangularjs/"> -->
-  <!-- navbar -->
-  <!-- <ng-include src="'app/components/navbar/navbar.html'"></ng-include> -->
-  <div>
-    <form action="">
-      <input type="text" name="usuario" id="usuario" placeholder="usuario" ng-model="usuario">
-      <br>
-      <input type="password" placeholder="contraseña">
-      <br>
-      <br>
-      <p>{{usuario}}</p>
-      <a href="#/dashboard" class="btn btn-success" ng-click="iniciarSesion()">iniciar sesion</a>
-    </form>
-  </div>
+    <div ng-view></div>
 
-<!-- ****************************************   scripts    ***************************************-->
-<!-- angularJS -->
-<script src="assets/js/libs/angular.min.js"></script>
+  <!-- ****************************************   scripts    ***************************************-->
+  <!-- angularJS -->
+  <script src="assets/js/libs/angular.min.js"></script>
 
-<!-- rutas angularJS -->
-<script src="assets/js/libs/angular-route.min.js"></script>
+  <!-- rutas angularJS -->
+  <script src="assets/js/libs/angular-route.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.min.js"></script> -->
 
-<!-- bootstrap JS -->
-<!-- <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+  
+  <!-- jquery -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  
+  <!-- popper.js -->
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  
+  <!-- bootstrap JS -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-<!-- jquery -->
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- materialize JS -->
+  <!-- <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script> -->
 
-<!-- popper.js -->
-<!-- <script src="node_modules/popper.js/dist/umd/popper.min.js"></script> -->
-
-<!-- controladores -->
-<script src="assets/js/controlador.js"></script>
+  <!-- controladores -->
+  <script src="assets/js/controlador.js"></script>
 </body>
 </html>

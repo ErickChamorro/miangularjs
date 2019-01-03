@@ -1,0 +1,4 @@
+.contenedor-principal{
+  margin-top: 60px; /*si le va a subir el padding, bajele al margin top lo mismo*/
+  padding: 10px;
+}
